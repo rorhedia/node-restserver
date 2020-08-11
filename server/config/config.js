@@ -1,19 +1,18 @@
-/**
- * PUERTO
- */
+// =====================
+// PUERTO
+// =====================
 process.env.PORT = process.env.PORT || 3000;
 
-/**
- * Entorno
- */
+// =====================
+// Entorno
+// =====================
 process.env.NODE_ENV = process.env.NODE_ENV || "dev";
 
-/**
- * DB
- */
+// =====================
+// DB
+// =====================
 let urlDB = "mongodb://localhost:27017/cafe";
 if (process.env.NODE_ENV !== "dev") {
-  urlDB =
-    "mongodb+srv://rorhedia:ZQHkfov1RqrK1qFA@practices.cdsjo.mongodb.net/cafe";
+  urlDB = process.env.URIDB;
 }
 process.env.URLDB = urlDB;
